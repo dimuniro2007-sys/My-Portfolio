@@ -1,0 +1,401 @@
+/* ============================================================
+   hire.css — Hire Me page styles
+   Dimuthu Danansuriya Portfolio
+   ============================================================ */
+
+/* ── HERO ─────────────────────────────────────────────────── */
+.hire-hero {
+  padding: 120px 0 80px;
+  border-bottom: 1px solid var(--grey-light);
+}
+
+.hire-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: end;
+}
+
+.hire-h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.hire-hero-sub {
+  font-size: 1rem;
+  color: var(--grey-mid);
+  max-width: 420px;
+  line-height: 1.7;
+  margin-top: 16px;
+}
+
+.hire-hero-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.hire-email-btn {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  padding: 16px 28px;
+  white-space: nowrap;
+}
+
+.hire-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hire-social-link {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--grey-mid);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.hire-social-link:hover {
+  color: var(--spring);
+}
+
+/* ── SERVICES GRID ────────────────────────────────────────── */
+.services-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  border: 1px solid var(--grey-light);
+}
+
+.service-card {
+  padding: 36px 32px;
+  border: 1px solid var(--grey-light);
+  background: var(--white);
+  transition: background 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  background: #f7fdf9;
+}
+
+.service-card.sc-highlight {
+  background: var(--black);
+  color: var(--white);
+}
+
+.service-card.sc-highlight h3,
+.service-card.sc-highlight p {
+  color: var(--white);
+}
+
+.sc-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sc-num {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  color: var(--grey-mid);
+}
+
+.sc-highlight .sc-num {
+  color: rgba(255,255,255,0.4);
+}
+
+.sc-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.service-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: var(--black);
+}
+
+.service-card p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #555; 
+  margin-bottom: 20px;
+}
+
+.sc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--grey-light);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.sc-highlight .sc-list {
+  border-color: rgba(255,255,255,0.12);
+}
+
+.sc-list li {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey-mid);
+  padding-left: 14px;
+  position: relative;
+}
+
+.sc-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--spring);
+}
+
+.sc-highlight .sc-list li {
+  color: rgba(255,255,255,0.55);
+}
+
+/* ── CONTACT SECTION ──────────────────────────────────────── */
+.contact-section {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  border-top: 1px solid var(--grey-light);
+}
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Left column */
+.contact-details {
+  margin-top: 36px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--grey-light);
+}
+
+.ci-label {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey-mid);
+}
+
+.ci-value {
+  font-size: 0.9rem;
+  color: var(--black);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a.ci-value:hover {
+  color: var(--spring);
+}
+
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cs-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--grey-light);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.cs-link:hover .cs-platform {
+  color: var(--spring);
+}
+
+.cs-platform {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--black);
+  transition: color 0.2s;
+}
+
+.cs-handle {
+  font-size: 0.8rem;
+  color: var(--grey-mid);
+}
+
+/* Right column — form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--black);
+  padding: 40px 36px;
+}
+
+.cf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cf-label {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey-mid);
+}
+
+.cf-input {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--white);
+  border: 1px solid transparent;
+  color: var(--black);
+  font-size: 0.9rem;
+  font-family: var(--font-body, sans-serif);
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.cf-input:focus {
+  border-color: var(--spring);
+}
+
+.cf-input::placeholder {
+  color: #b0b0b0;
+}
+
+.cf-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.cf-textarea {
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.cf-submit {
+  width: 100%;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  margin-top: 4px;
+}
+
+.cf-note {
+  font-size: 0.82rem;
+  min-height: 1.2em;
+  text-align: center;
+  margin: 0;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hire-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hire-hero-cta {
+    align-items: flex-start;
+  }
+
+  .hire-socials {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-form {
+    padding: 28px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hire-hero {
+    padding: 90px 0 60px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cs-link {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}

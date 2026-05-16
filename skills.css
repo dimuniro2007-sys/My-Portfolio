@@ -1,0 +1,270 @@
+/* ── SKILLS PAGE ───────────────────────────────────────────── */
+
+.page-hero {
+  background: var(--black);
+  color: var(--white);
+  padding: clamp(60px, 8vw, 100px) 0 clamp(40px, 5vw, 60px);
+  border-bottom: 3px solid var(--spring);
+}
+.page-hero .section-label { color: var(--mint); }
+.page-hero .section-title { color: var(--white); }
+.page-hero .section-title em { color: var(--spring); }
+.page-hero-sub {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #888;
+  max-width: 560px;
+  line-height: 1.65;
+}
+.sk-hero-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 60px;
+}
+.sk-hero-img {
+  flex-shrink: 0;
+  width: 200px;
+  height: 260px;
+  border: 2px solid var(--spring);
+  overflow: hidden;
+}
+.sk-hero-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #444; text-align: center;
+}
+.sk-hero-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ABOUT SECTION */
+.sk-about { background: var(--white); }
+.sk-about-inner {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+.sk-about-text {
+  flex: 1.2;
+}
+.sk-about-text p {
+  font-size: 1rem;
+  line-height: 1.72;
+  color: var(--grey-dark);
+  margin-bottom: 20px;
+}
+.sk-about-text p:first-of-type { margin-top: 24px; }
+
+/* TIMELINE */
+.sk-exp-timeline { flex: 1; }
+.sk-exp-timeline .section-label { margin-bottom: 24px; }
+.timeline { display: flex; flex-direction: column; gap: 0; }
+.tl-item {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 36px;
+}
+.tl-item:last-child { padding-bottom: 0; }
+.tl-dot {
+  width: 12px; height: 12px;
+  background: var(--black);
+  border: 2px solid var(--black);
+  flex-shrink: 0;
+  margin-top: 6px;
+  position: relative;
+}
+.tl-dot::after {
+  content: '';
+  position: absolute;
+  top: 12px; left: 5px;
+  width: 1px;
+  height: calc(100% + 24px);
+  background: var(--grey-mid);
+}
+.tl-item:last-child .tl-dot::after { display: none; }
+.tl-dot-green { background: var(--spring); border-color: var(--spring); }
+.tl-content {}
+.tl-date {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mint);
+  display: block;
+  margin-bottom: 4px;
+}
+.tl-content h4 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+.tl-content p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--grey-dark);
+}
+
+/* SKILLS SECTION */
+.sk-skills { background: var(--grey-light); }
+.sk-skills-header { margin-bottom: 40px; }
+
+/* Accordion */
+.skill-accordion { display: flex; flex-direction: column; gap: 2px; }
+.sk-item {
+  background: var(--white);
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.sk-item.open { border-color: var(--spring); }
+.sk-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px;
+  background: var(--white);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sk-toggle:hover { background: var(--grey-light); }
+.sk-item.open .sk-toggle { background: var(--black); }
+.sk-toggle-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.sk-icon {
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem; font-weight: 900;
+  flex-shrink: 0;
+}
+.sk-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--black);
+}
+.sk-item.open .sk-name { color: var(--white); }
+.sk-arrow {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--black);
+  transition: transform 0.3s;
+  line-height: 1;
+}
+.sk-item.open .sk-arrow { color: var(--spring); }
+
+/* Body */
+.sk-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.sk-item.open .sk-body { max-height: 600px; }
+.sk-body-inner {
+  display: flex;
+  gap: 50px;
+  padding: 32px 28px 36px;
+  border-top: 1px solid var(--grey-light);
+}
+.sk-desc-block {
+  flex: 1;
+}
+.sk-desc-block p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--grey-dark);
+  margin-bottom: 14px;
+}
+.sk-bars {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+.sk-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sk-bar-label {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+  width: 200px;
+  flex-shrink: 0;
+}
+.sk-bar-track {
+  flex: 1;
+  height: 6px;
+  background: var(--grey-light);
+  overflow: hidden;
+}
+.sk-bar-fill {
+  height: 100%;
+  width: 0;
+  background: #ff4767;
+  transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.sk-bar-pct {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--grey-dark);
+  width: 32px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* CTA band (reuse from home) */
+.cta-band {
+  background: var(--spring);
+  padding: clamp(50px, 8vw, 100px) 0;
+}
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  color: var(--black);
+}
+.cta-title em { font-style: italic; color: var(--white); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .sk-hero-inner { flex-direction: column; }
+  .sk-hero-img { display: none; }
+  .sk-about-inner { flex-direction: column; }
+  .sk-body-inner { flex-direction: column; gap: 28px; }
+  .sk-bar-label { width: 140px; }
+  .cta-inner { flex-direction: column; text-align: center; }
+}
+@media (max-width: 600px) {
+  .sk-toggle { padding: 18px 20px; }
+  .sk-body-inner { padding: 24px 20px; }
+}
