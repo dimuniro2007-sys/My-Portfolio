@@ -420,12 +420,6 @@ footer {
   .nav-links { display: none; }
   .nav-hire { display: none; }
   .hamburger { display: flex; }
-  
-  nav {
-    padding: 0 20px;
-  }
-  
-  .nav-inner {
-    padding: 0;
-  }
+  nav { padding: 0 20px; }
+  .nav-inner { padding: 0; }
 }
