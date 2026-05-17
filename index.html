@@ -6,13 +6,6 @@
   <title>Dimuthu Danansuriya — 3D Artist & Creative</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="home.css" />
-  <style>
-    @media (max-width: 768px) {
-      .nav-links { display: none !important; }
-      .nav-hire { display: none !important; }
-      .hamburger { display: flex !important; flex-direction: column; gap: 5px; }
-    }
-  </style>
   </head>
 <body>
 
@@ -20,16 +13,18 @@
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="index.html">D<span>.</span>D</a>
-    <ul class="nav-links">
+    <ul class="nav-links" style="display:none !important;">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="work.html">My Work</a></li>
       <li><a href="breakdowns.html">Breakdowns</a></li>
       <li><a href="skills.html">Skills</a></li>
       <li><a href="hire.html" class="nav-hire">Hire Me</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Menu" style="display:flex; flex-direction:column; gap:5px;">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu" style="display:flex !important; flex-direction:column; gap:5px; padding:6px; background:none; border:none; cursor:pointer;">
+  <span style="display:block; width:26px; height:2px; background:white;"></span>
+  <span style="display:block; width:26px; height:2px; background:white;"></span>
+  <span style="display:block; width:26px; height:2px; background:white;"></span>
+</button>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
