@@ -416,7 +416,7 @@ footer {
 }
 
 /* ── RESPONSIVE NAV ────────────────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .nav-links { display: none; }
   .nav-hire { display: none; }
   .hamburger { display: flex; }
